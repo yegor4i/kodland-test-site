@@ -1,0 +1,58 @@
+{% load static %}
+<html>
+
+<head>
+  <title>Школа программирования для подростков 12-17 лет</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/museocyrl/stylesheet.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/circerounded/stylesheet.css' %}">
+</head>
+
+<body>
+
+  <div class="main-menu container valign-wrapper">
+    <div class="brand-logo valign-wrapper">
+      <!-- <img src="{% static 'img/logo.png' %}" alt="" srcset=""> -->
+      <span>Блог</span>
+    </div>
+    <div class="login valign-wrapper">
+      <span class=""><img src="{% static 'img/email.png' %}" alt="" srcset=""></span>
+      <span class=""><img src="{% static 'img/avatar.png' %}" alt="" srcset=""></span>
+      <span class=""><img src="{% static 'img/logout.png' %}" alt="" srcset=""></span>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="container">
+    {% block post-last %}
+    {% endblock %}
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="container section">
+    {% block post-list %}
+    {% endblock %}
+  </div>
+
+
+  <div class="page-header">
+    {% if user.is_authenticated %}
+    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    {% endif %}
+    <h1><a href="/">Kodland blog</a></h1>
+  </div>
+
+  <div class="content container">
+    <div class="row">
+      <div class="col-md-8">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

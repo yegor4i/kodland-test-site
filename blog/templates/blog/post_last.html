@@ -1,0 +1,27 @@
+{% block post-last %}
+{% load static %}
+  <div class="row last-post">
+    <div class="col s10">
+      <div class="row">
+        <div class="text col s7">
+          <div class="valign-wrapper">
+            <span class="post-new">NEW</span>
+            <span class="post-like valign-wrapper"><img src="{% static 'img/like.png' %}" alt="">25</span>
+            <span class="post-blob valign-wrapper"><img src="{% static 'img/blob.png' %}" alt="">25</span>
+            <span class="post-views valign-wrapper"><img src="{% static 'img/views.png' %}" alt="">25</span>
+          </div>
+
+          <h2>Почему подросткам стоит изучать программирование?</h2>
+          <p>Объясняем почему словосочетание «программирование для подростков» не должно вызывать скептическую улыбку
+            и какие полезные навыки приобретают ребята, изучая программирование.</p>
+            <p>{% post.title %}</p>
+          <a class="waves-effect waves-light btn">Читать</a>
+        </div>
+        <div class="image col s5">
+          <img class="responsive-img" src="{% static 'img/1Statya_3.png' %}">
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endblock post-last %}

@@ -1,0 +1,123 @@
+body {
+  font-family: 'Circe Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.main-menu {
+  height: 100px;
+  justify-content: space-between;
+}
+.brand-logo {
+  font-size: 24px;
+  line-height: 31px;
+  color: #010101;
+}
+.brand-logo span {
+  padding-top: 10px;
+  margin-left: 11px; 
+}
+.login span:nth-child(1) {
+  margin-top: -5px;
+}
+.login span:nth-child(2) {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.last-post {
+  padding: 42px 0 0;
+  margin: 0;
+}
+.last-post h2 {
+  margin: 10px 0;
+  font-family: 'Museo Cyrl';
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 900;
+  color: #315AF2;
+}
+.last-post span {
+  color: #CDCDCD;
+  margin-right: 10px;
+}
+.last-post span.post-new {
+  color: #E9399C;
+}
+.text>div {
+  line-height: 20px;
+}
+.text>div .valign-wrapper>img {
+  padding-right: 3px;
+}
+a.waves-effect {
+  background: #315AF2;
+  border-radius: 3px;
+  font-family: "Museo Cyrl";
+  font-size: 36px;
+  font-weight: 900;
+  height: auto;
+  text-transform: initial;
+  padding: 12px 20px;
+  width: auto;
+}
+a.waves-effect.btn:hover {
+  background-color: #303f9f;
+}
+.recent-posts-header {
+  justify-content: space-between;
+}
+h3 {
+  color: #315AF2;
+  font-family: "Museo Cyrl";
+  font-size: 36px;
+  font-weight: 900;
+  margin: 30px 0;
+}
+.post {
+  width: 31% !important;
+  border: 2px solid #CDCDCD;
+  border-radius: 3px;
+  position: relative;
+  padding-top: 30px !important;
+  margin: 8px !important;
+}
+.post:hover {
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 2px 10px #E2EDF8;
+}
+.post-date {
+  color: #979797;
+  font-size: 12px;
+  position: absolute;
+  top: 15px;
+  left: 22px;
+}
+.post>img {
+  padding: 0 20px;;
+}
+.post .sup-header {
+  font-size: 12px;
+}
+.post h4 {
+  font-family: "Circe Rounded";
+  font-size: 24px;
+  color: #315AF2;
+  margin: 10px 0;
+}
+.post .post-icons {
+  line-height: 20px;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.post .post-icons img {
+  padding-right: 3px;
+}
+.post .post-icons span {
+  font-size: 24px;
+  color: #CDCDCD;
+  margin-bottom: 15px;
+}
+.post .post-icons .post-like {
+  padding-right: 21px;
+}

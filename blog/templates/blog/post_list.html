@@ -1,0 +1,64 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block post-last %}
+  <div class="row last-post">
+    <div class="col s10">
+      <div class="row">
+        <div class="text col s7">
+          <div class="valign-wrapper">
+            <span class="post-new">NEW</span>
+            <span class="post-like valign-wrapper"><img src="{% static 'img/like.png' %}" alt="">25</span>
+            <span class="post-blob valign-wrapper"><img src="{% static 'img/blob.png' %}" alt="">25</span>
+            <span class="post-views valign-wrapper"><img src="{% static 'img/views.png' %}" alt="">25</span>
+          </div>
+
+          <h2>Почему подросткам стоит изучать программирование?</h2>
+          <p>Объясняем почему словосочетание «программирование для подростков» не должно вызывать скептическую улыбку
+            и какие полезные навыки приобретают ребята, изучая программирование.</p>
+          <p></p>
+          <a class="waves-effect waves-light btn">Читать</a>
+        </div>
+        <div class="image col s5">
+          <img class="responsive-img" src="{% static 'img/1Statya_3.png' %}">
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endblock post-last %}
+
+{% block post-list %}
+<div class="row recent-posts">
+  <div class="col s10">
+    <div class="recent-posts-header valign-wrapper">
+      <h3>Другие статьи</h3>
+      <img src="{% static 'img/filter.png' %}" alt="" srcset="">
+    </div>
+    <div class="row">
+
+      {% for post in posts %}
+
+        <div class="post col s4 center-align hoverable">
+          <span class="post-date">{{ post.published_date}}</span>
+          <img class="responsive-img" src="{% static 'img/1Statya_2.png' %}" alt="">
+          <p class="sup-header">Профессии будущего</p>
+          <a href="{% url 'post_detail' pk=post.pk %}"><h4>{{ post.title }}</h4></a>
+          <div class="post-icons valign-wrapper">
+            <div class="valign-wrapper">
+              <span class="post-like valign-wrapper"><img src="{% static 'img/like-1.png' %}" alt="">25</span>
+            <span class="post-blob valign-wrapper"><img src="{% static 'img/blob-1.png' %}" alt="">25</span>
+            </div>
+            <span class="post-views valign-wrapper right"><img src="{% static 'img/views-1.png' %}" alt="">25</span>
+          </div>
+        </div>
+
+      {% endfor %}
+
+    </div>
+    
+    
+  </div>    
+</div>
+  
+{% endblock post-list %}
